@@ -1,0 +1,114 @@
+<html>
+  <head>
+    
+    <title>Arwad Salim Mohammed Al Hasani</title>
+    <link rel="stylesheet" href="style-my-profile.css">
+  </head>
+  <body bgcolor="black">
+
+    <header>
+      <div class="logo">MY PROFILE</div>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="./">HOME</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="back02.mp4" autoplay muted loop></video>
+
+      <video class="video-slide" src="back02.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="back02.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="back02.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="back02.mp4" autoplay muted loop></video>
+      
+      <div class="content active">
+        <h1>WELCOME TO MY PORTFOLIO</h1>
+      </div>
+
+      <div class="content">
+        <h1>Personal Details</h1>
+        <p>Arwad salim<br><br>
+          Muscat, Al Amerat | 79641256 | arws7v@gmail.com </p>
+      </div>
+
+      <div class="content">
+        <h1>Education Details</h1>
+        <p>College email: 23F24650@mec.edu.om <br><br>
+          Middle East College <br><br>
+          Major in Computer Science Software Technology Pathway | Expected Graduation: 2027 <br><br>                 
+          GPA: 3.75 <br><br>
+          Relevant coursework: Advanced Programming, Teamwork, Problem Solving, Time Management. </p>
+      </div>
+
+      <div class="content">
+        <h1>Skills</h1>
+        <h3> Technical Skills: </h3>
+        <p> Proficient in Microsoft Office Suite (Word, Excel, PowerPoint) <br> 
+        Experienced with Canva and Google Workspace tools <br> 
+        Knowledgeable in Survey and Feedback Platforms <br> 
+        Programming: Basic proficiency in HTML/CSS, JavaScript, Java, and C# </p>
+
+        <h3> Soft Skills: </h3>
+        <p> Strong communication and interpersonal skills <br> 
+        Organizational and multi-tasking abilities <br> 
+        Team collaboration and cross-cultural communication <br> 
+        Problem-solving and customer service expertise </p>
+      </div>
+
+      <div class="content">
+        <h1>Hobbies and Interests</h1>
+        <p> Blogging and Photography: Creating and managing content for personal blogs <br><br>
+            Learning New Technologies: Exploring emerging software tools and programming concepts in spare time. <br><br>
+            Problem-Solving: Enjoy tackling puzzles, logic games, and challenges that improve critical thinking. <br><br>
+            Fitness and Well-being: Practicing mindfulness and staying active. </p>
+      </div>
+      
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+
+  </body>
+</html>
